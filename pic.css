@@ -28,7 +28,7 @@ body {
             #ffa500 0 11px,
             #ffd700 11px 22px
     );
-    z-index: 2;
+    z-index: 5;
 }
 
 .ground::after {
@@ -42,3 +42,56 @@ body {
     background-size: 25px 10px;
     background-repeat: repeat-x;
 }
+
+/* Рыбка */
+.fish {
+    position: absolute;
+    top: 80px;
+    left: 50px;
+    width: 60px;
+    height: 30px;
+    border-radius: 50%;
+    background:
+        linear-gradient(to right,
+        #fff6cc 0%,
+        #ffeb99 20%,
+        #ffc966 50%,
+        orange 100%);
+}
+
+.fish::before {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 0;
+    width: 25px;
+    height: 40px;
+    background: orange;
+    clip-path: path("M -10 17 L 23 4 Q 14 13 18 25 Z");
+}
+
+.fish::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    width: 6px;
+    height: 6px;
+    background: black;
+    border-radius: 50%;
+}
+
+
+.fish.fish1 {
+    z-index: 10;
+    transform: scaleX(-1);
+}
+
+.fish.fish2 {
+    z-index: 11;
+}
+
+.fish.fish3 {
+    z-index: 3;
+}
+
