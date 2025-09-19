@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f8ff;
+    height: 100vh;
+    margin: 0;
+}
+
+.content {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: white;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Дно */
+.ground {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: repeating-linear-gradient(
+            to right,
+            #ffa500 0 11px,
+            #ffd700 11px 22px
+    );
+    z-index: 2;
+}
+
+.ground::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10px;
+
+    background-image: radial-gradient(ellipse at center, #a0522d 70%, transparent 71%);
+    background-size: 25px 10px;
+    background-repeat: repeat-x;
+}
